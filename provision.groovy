@@ -32,7 +32,7 @@ pipelineJob("${removePipelinesFolderName}/remove-cd-stage") {
                         'will be ignored and these parameters will be selected from the dropdown list later.')
                 stringParam('CD_PIPELINE', '', 'CD pipeline you want to remove stage in.')
                 stringParam('CD_STAGE', '', 'CD stage you want to remove.')
-                booleanParam('RESOURCES_VERSION_2', false, 'Use custom resources version 2 if set to true.')
+                booleanParam('RESOURCES_VERSION_2', true, 'Use custom resources version 2 if set to true.')
             }
         }
     }
@@ -59,7 +59,7 @@ pipelineJob("${removePipelinesFolderName}/remove-cd-pipeline") {
                 booleanParam('INTERACTIVE_MODE', true, 'If set to true, field CD_PIPELINE' +
                         'will be ignored and this parameter will be selected from the dropdown list later.')
                 stringParam('CD_PIPELINE', '', 'CD pipeline you want to remove.')
-                booleanParam('RESOURCES_VERSION_2', false, 'Use custom resources version 2 if set to true.')
+                booleanParam('RESOURCES_VERSION_2', true, 'Use custom resources version 2 if set to true.')
             }
         }
     }
@@ -88,7 +88,7 @@ pipelineJob("${removePipelinesFolderName}/remove-codebase-branch") {
                 stringParam('CODEBASE', '', 'Codebase you want to remove branch in.')
                 stringParam('CODEBASE_BRANCH', '', 'Codebase branch you want to remove. Branch \"master\" is protected from removing and ' +
                         'can be removed only with the whole codebase.')
-                booleanParam('RESOURCES_VERSION_2', false, 'Use custom resources version 2.')
+                booleanParam('RESOURCES_VERSION_2', true, 'Use custom resources version 2.')
                 booleanParam('REMOVE_BRANCH_SONAR_PROJECT', true, 'Remove ${CODEBASE}:${CODEBASE_BRANCH} sonar project. This parameter is ignored ' +
                         'for autotests codebases.')
             }
@@ -117,7 +117,7 @@ pipelineJob("${removePipelinesFolderName}/remove-codebase") {
                 booleanParam('INTERACTIVE_MODE', true, 'If set to true, field CODEBASE ' +
                         'will be ignored and this parameters will be selected from the dropdown list later.')
                 stringParam('CODEBASE', '', 'Codebase you want to remove.')
-                booleanParam('RESOURCES_VERSION_2', false, 'Use custom resources version 2 if set to true.')
+                booleanParam('RESOURCES_VERSION_2', true, 'Use custom resources version 2 if set to true.')
                 booleanParam('REMOVE_GERRIT_PROJECT', true, 'Gerrit project will be removed if set to true.')
                 stringParam('GERRIT_SSH_PORT', '', 'Required if REMOVE_GERRIT_PROJECT is true.')
                 booleanParam('REMOVE_SONAR_PROJECTS', true, 'Remove all sonar projects related to codebase.')
