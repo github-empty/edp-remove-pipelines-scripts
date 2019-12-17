@@ -1,3 +1,3 @@
-@Library(['remove-pipelines']) _
+@Library(['edp-remove-pipelines']) _
 
 RemoveCodebase()
