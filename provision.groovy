@@ -2,7 +2,7 @@ import jenkins.model.Jenkins
 
 Jenkins jenkins = Jenkins.instance
 
-String repository = "https://github.com/Deflier/edp-remove-pipelines-scripts"
+String repository = "https://github.com/github-empty/edp-remove-pipelines-scripts"
 
 String removePipelinesFolderName = "remove-pipelines"
 def removePipelinesFolder = jenkins.getItem(removePipelinesFolderName)
